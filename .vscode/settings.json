@@ -1,0 +1,24 @@
+{
+    "cSpell.words": [
+      "APIV",
+      "flyingpdf",
+      "Memoizable",
+      "networkidle",
+      "pdfpageexport",
+      "SSSZ",
+      "unzipper"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.fixAll.eslint": "always"
+    },
+    "eslint.validate": [
+        "typescript",
+        "javascript"
+    ],
+    "editor.formatOnSave": false,
+    "files.eol": "\n",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
+}
