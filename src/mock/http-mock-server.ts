@@ -12,7 +12,8 @@ app.use('/', (req, res) => {
   );
   res.json({
     timestamp: new Date().toISOString(),
-    result: `Result of ${req.body}`,
+    type: typeof req.body,
+    result: `Result of ${JSON.stringify(req.body)}`,
   });
 });
 
