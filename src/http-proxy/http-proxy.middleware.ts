@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 import { HTTP_PROXY_TARGET } from '../constants/http-proxy.constant';
+import { AppLogger } from '../globals/app-logger.global';
 
 @Injectable()
 export class HttpProxyMiddleware implements NestMiddleware {
@@ -12,6 +13,11 @@ export class HttpProxyMiddleware implements NestMiddleware {
     secure: true,
     pathRewrite: {
       '^/proxy': '',
+    },
+    on: {
+      proxyReq: (proxyReq, req: Request) => {
+        AppLogger.log(req.method + ' ' + req.originalUrl);
+      },
     },
   });
 
